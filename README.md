@@ -11,5 +11,5 @@ To use:
 You can do this from the command line using the following:
 
 ```bash
-grep -rl "plugintemplate" . | xargs sed -i 's/webskillet14/newpluginname/g'
+grep -rl "plugintemplate" . | xargs sed -i 's/plugintemplate/newpluginname/g'
 ```
