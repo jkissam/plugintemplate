@@ -221,11 +221,11 @@ function plugintemplate_admin_page() {
 	<div class='wrap'>
 		
 		<h1>plugintemplate <a href="#plugintemplate-add" class="page-title-action"><?php _e('Add New', 'plugintemplate'); ?></a></h1>
-
-		<?php if ($notices_html) { echo $notices_html; } ?>
 		
 		<div class="wrap-inner">
-			
+
+			<?php if ($notices_html) { echo $notices_html; } ?>
+
 			<h2 class="nav-tab-wrapper">
 				<a href="#plugintemplate-content" class="nav-tab<?php echo ($tab == 'content') ? ' nav-tab-active' : ''; ?>">
 					<?php _e('Content', 'plugintemplate'); ?>
