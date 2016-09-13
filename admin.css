@@ -1,0 +1,12 @@
+/* general settings */
+.wrap .nav-tab .dashicons, .wrap button .dashicons, .wrap .button .dashicons { position: relative; top: 4px; }
+span.required { color: #dc3232; }
+input.error, textarea.error { border: 1px solid #dc3232; color: #dc3232; }
+
+/* admin tabs */
+.nav-tab:focus { box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; color: #555; }
+.plugintemplate-admin-tab { margin: 10px 0; }
+.js .plugintemplate-admin-tab { display: none; }
+.js .plugintemplate-admin-tab-active { display: block; }
+
+
