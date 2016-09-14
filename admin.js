@@ -33,5 +33,28 @@ jQuery(document).ready(function($){
 	$('form .error').focus(function(){
 		$(this).removeClass('error');
 	});
+
+	/**
+	 * Copy to clipboard
+	 */
+	$('button.copy').click(function(event){
+		event.preventDefault();
+		var $self = $(this);
+		var $input = $($self.attr('data-copytarget'));
+		if ($input.length && ( $input.is('input') || $input.is('textarea') ) ) {
+			$input.select();
+			try {
+				// copy text
+				document.execCommand('copy');
+				var copyText = $self.text();
+				$self.addClass('copied').text(actionnetworkText.copied);
+				setTimeout(function() { $self.removeClass('copied').text(copyText); }, 400);
+				$input.blur();
+			}
+			catch (err) {
+				alert(actionnetworkText.pressCtrlCToCopy);
+			}
+		}
+	});
 	
 });

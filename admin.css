@@ -9,4 +9,8 @@ input.error, textarea.error { border: 1px solid #dc3232; color: #dc3232; }
 .js .plugintemplate-admin-tab { display: none; }
 .js .plugintemplate-admin-tab-active { display: block; }
 
-
+/* copy to clipboard buttons */
+input[type="text"].copy-text { box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; font-family: 'Courier', monospace; background: #fff; vertical-align: middle; margin-right: 0; border-right: none; }
+button.copy { border: 1px solid #ddd; background: #fff; padding: 2px 5px; border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; transition: background-color 0.5s ease;  vertical-align: middle; cursor: pointer; }
+button.copy:focus { outline: none; }
+button.copy.copied { background-color: #0073aa; }
