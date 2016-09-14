@@ -47,12 +47,12 @@ jQuery(document).ready(function($){
 				// copy text
 				document.execCommand('copy');
 				var copyText = $self.text();
-				$self.addClass('copied').text(actionnetworkText.copied);
+				$self.addClass('copied').text(plugintemplateText.copied);
 				setTimeout(function() { $self.removeClass('copied').text(copyText); }, 400);
 				$input.blur();
 			}
 			catch (err) {
-				alert(actionnetworkText.pressCtrlCToCopy);
+				alert(plugintemplateText.pressCtrlCToCopy);
 			}
 		}
 	});

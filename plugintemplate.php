@@ -195,7 +195,15 @@ function plugintemplate_admin_page() {
 
 	// load scripts and stylesheets
 	wp_enqueue_style('plugintemplate-admin-css', plugins_url('admin.css', __FILE__));
-	wp_enqueue_script('plugintemplate-admin-js', plugins_url('admin.js', __FILE__));
+	wp_register_script( 'plugintemplate-admin-js', plugins_url('admin.js', __FILE__) );
+
+	// localize script
+	$translation_array = array(
+		'copied' => __( 'Copied!', 'plugintemplate' ),
+		'pressCtrlCToCopy' => __( 'please press Ctrl/Cmd+C to copy', 'plugintemplate' ),
+	);
+	wp_localize_script( 'plugintemplate-admin-js', 'plugintemplateText', $translation_array );
+	wp_enqueue_script( 'plugintemplate-admin-js' );
 	
 	// This checks which tab we should display
 	$tab = isset($_REQUEST['plugintemplate_tab']) ? $_REQUEST['plugintemplate_tab'] : 'actions';
